@@ -139,12 +139,13 @@
             this.txbNome.Name = "txbNome";
             this.txbNome.Size = new System.Drawing.Size(456, 20);
             this.txbNome.TabIndex = 1;
+            this.txbNome.TextChanged += new System.EventHandler(this.txbNome_TextChanged);
             // 
             // frmAdicionarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 401);
+            this.ClientSize = new System.Drawing.Size(484, 411);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txbObs);

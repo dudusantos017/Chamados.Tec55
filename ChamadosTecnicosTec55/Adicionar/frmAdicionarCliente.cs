@@ -41,7 +41,7 @@ namespace ChamadosTecnicosTec55.Adicionar
             }
             else 
             {
-                // TODA EZ QUE MEXER COM BD USAR TRY
+                // TODA QUE MEXER COM BD USAR TRY
                 try
                 {
                     //Preenche o Objeto Cliente
@@ -52,16 +52,20 @@ namespace ChamadosTecnicosTec55.Adicionar
 
                     //CHAMA O DAO PARA INCLUIR O CLIENTE
                     clienteDao.IncluiCliente(cliente);
+                    MessageBox.Show("Cadastrado com sucesso!");
+                    this.Close();
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao Cadastrar","Atenção",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-                finally
-                {
-                    MessageBox.Show("Cadastrado com sucesso!");
-                }
             }
+        }
+
+        private void txbNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
