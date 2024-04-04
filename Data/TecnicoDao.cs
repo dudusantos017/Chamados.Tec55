@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data; // ADO.net
-using System.Data.SqlClient; // ADO para SQL SERVER
+using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
+using System.Security.AccessControl; // ADO para SQL SERVER
 
 namespace Data
 {
