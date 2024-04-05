@@ -67,6 +67,7 @@
             this.cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
             this.cadastroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.cadastroToolStripMenuItem.Text = "Cadastro";
+            this.cadastroToolStripMenuItem.Click += new System.EventHandler(this.cadastroToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
             // 
@@ -74,12 +75,15 @@
             this.clienteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
             // 
             // técnicoToolStripMenuItem
             // 
             this.técnicoToolStripMenuItem.Name = "técnicoToolStripMenuItem";
+            this.técnicoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
             this.técnicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.técnicoToolStripMenuItem.Text = "Técnico";
+            this.técnicoToolStripMenuItem.Click += new System.EventHandler(this.técnicoToolStripMenuItem_Click);
             // 
             // gestorDeChamadosToolStripMenuItem
             // 
@@ -92,6 +96,7 @@
             this.gestorDeClientesToolStripMenuItem.Name = "gestorDeClientesToolStripMenuItem";
             this.gestorDeClientesToolStripMenuItem.Size = new System.Drawing.Size(114, 20);
             this.gestorDeClientesToolStripMenuItem.Text = "Gestor de Clientes";
+            this.gestorDeClientesToolStripMenuItem.Click += new System.EventHandler(this.gestorDeClientesToolStripMenuItem_Click);
             // 
             // calculadoraToolStripMenuItem
             // 

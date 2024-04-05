@@ -67,5 +67,10 @@ namespace ChamadosTecnicosTec55.Adicionar
         {
 
         }
+
+        private void frmAdicionarCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

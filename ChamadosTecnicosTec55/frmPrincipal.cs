@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ChamadosTecnicosTec55.Adicionar;
+using ChamadosTecnicosTec55.Alterar;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,6 +41,34 @@ namespace ChamadosTecnicosTec55
         private void calculadoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Process.Start("calc");
+        }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formcliente = new frmAdicionarCliente();
+            // Define o Formulario pai
+            formcliente.MdiParent = this;
+            formcliente.Show();
+
+        }
+
+        private void técnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formtecnico = new frmTecnicoAdicionar();
+            formtecnico.MdiParent = this;
+            formtecnico.Show();
+        }
+
+        private void gestorDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formgerirtecnico = new frmGerirClientes();
+            formgerirtecnico.MdiParent = this;
+            formgerirtecnico.Show();
+        }
+
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
