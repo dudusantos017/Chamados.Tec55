@@ -67,5 +67,15 @@ namespace ChamadosTecnicosTec55.Alterar
         private void dgvGerirCliente_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            // Verifique se alguma linha está selecionada no DGV
+            if(dgvGerirCliente.SelectedRows.Count > 0)
+            {
+                // Obtém o código do cliente da linha selecionada
+                int codigo = Convert.ToInt32(dgvGerirCliente.CurrentRow.Cells[0].Value);
+            }
+        }
     }
 }

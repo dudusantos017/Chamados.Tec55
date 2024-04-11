@@ -41,11 +41,14 @@
             // 
             // dgvGerirCliente
             // 
+            this.dgvGerirCliente.AllowUserToAddRows = false;
+            this.dgvGerirCliente.AllowUserToDeleteRows = false;
             this.dgvGerirCliente.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvGerirCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGerirCliente.GridColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvGerirCliente.Location = new System.Drawing.Point(12, 39);
             this.dgvGerirCliente.Name = "dgvGerirCliente";
+            this.dgvGerirCliente.ReadOnly = true;
             this.dgvGerirCliente.Size = new System.Drawing.Size(591, 259);
             this.dgvGerirCliente.TabIndex = 0;
             this.dgvGerirCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGerirCliente_CellContentClick);
@@ -87,6 +90,7 @@
             this.btnAlterar.TabIndex = 4;
             this.btnAlterar.Text = "Alterar Cliente";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnExcluir
             // 
