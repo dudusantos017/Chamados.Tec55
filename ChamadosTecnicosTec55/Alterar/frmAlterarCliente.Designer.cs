@@ -33,12 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbCodigo = new System.Windows.Forms.TextBox();
+            this.txbNome = new System.Windows.Forms.TextBox();
+            this.txbProfissao = new System.Windows.Forms.TextBox();
+            this.txbSetor = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txbObs = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -91,33 +91,33 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Obs:";
             // 
-            // textBox1
+            // txbCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(233, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(89, 20);
-            this.textBox1.TabIndex = 5;
+            this.txbCodigo.Location = new System.Drawing.Point(233, 26);
+            this.txbCodigo.Name = "txbCodigo";
+            this.txbCodigo.Size = new System.Drawing.Size(89, 20);
+            this.txbCodigo.TabIndex = 5;
             // 
-            // textBox2
+            // txbNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(306, 20);
-            this.textBox2.TabIndex = 6;
+            this.txbNome.Location = new System.Drawing.Point(16, 76);
+            this.txbNome.Name = "txbNome";
+            this.txbNome.Size = new System.Drawing.Size(306, 20);
+            this.txbNome.TabIndex = 6;
             // 
-            // textBox3
+            // txbProfissao
             // 
-            this.textBox3.Location = new System.Drawing.Point(16, 123);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(306, 20);
-            this.textBox3.TabIndex = 7;
+            this.txbProfissao.Location = new System.Drawing.Point(16, 123);
+            this.txbProfissao.Name = "txbProfissao";
+            this.txbProfissao.Size = new System.Drawing.Size(306, 20);
+            this.txbProfissao.TabIndex = 7;
             // 
-            // textBox4
+            // txbSetor
             // 
-            this.textBox4.Location = new System.Drawing.Point(16, 175);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(306, 20);
-            this.textBox4.TabIndex = 8;
+            this.txbSetor.Location = new System.Drawing.Point(16, 175);
+            this.txbSetor.Name = "txbSetor";
+            this.txbSetor.Size = new System.Drawing.Size(306, 20);
+            this.txbSetor.TabIndex = 8;
             // 
             // btnOK
             // 
@@ -128,25 +128,25 @@
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txbObs
             // 
-            this.textBox6.Location = new System.Drawing.Point(16, 224);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(306, 97);
-            this.textBox6.TabIndex = 11;
+            this.txbObs.Location = new System.Drawing.Point(16, 224);
+            this.txbObs.Multiline = true;
+            this.txbObs.Name = "txbObs";
+            this.txbObs.Size = new System.Drawing.Size(306, 97);
+            this.txbObs.TabIndex = 11;
             // 
             // frmAlterarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(334, 362);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.txbObs);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbSetor);
+            this.Controls.Add(this.txbProfissao);
+            this.Controls.Add(this.txbNome);
+            this.Controls.Add(this.txbCodigo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -166,11 +166,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbCodigo;
+        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.TextBox txbProfissao;
+        private System.Windows.Forms.TextBox txbSetor;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txbObs;
     }
 }

@@ -35,7 +35,7 @@ namespace ChamadosTecnicosTec55.Alterar
 
             // Chama o Metodo BuscarCliente do objeto
             DataSet ds = new DataSet();
-            ds = clienteDao.BuscarCliente(busca);
+            ds = clienteDao.BuscaCliente(busca);
 
             // Defini o DataSource do DataGridView
             dgvGerirCliente.DataSource = ds;
@@ -46,16 +46,14 @@ namespace ChamadosTecnicosTec55.Alterar
 
         public void btnBuscar_Click(object sender, EventArgs e)
         {
-            ClienteDao clienteDao = new ClienteDao(_conexao);
-
-            string pesquisa = txbBuscar.Text.ToString();
-
-            DataSet ds = new DataSet();
-            ds = clienteDao.BuscarCliente(pesquisa);
-
-            dgvGerirCliente.DataSource = ds;
-
-            dgvGerirCliente.DataMember = "Clientes";
+            if (txbBuscar.Text != "")
+            {
+                ListarCliente();
+            }
+            else
+            {
+                MessageBox.Show("Digite algo para buscar");
+            }
         }
 
         private void btnIncluir_Click(object sender, EventArgs e)
@@ -71,11 +69,27 @@ namespace ChamadosTecnicosTec55.Alterar
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             // Verifique se alguma linha está selecionada no DGV
-            if(dgvGerirCliente.SelectedRows.Count > 0)
+            if (dgvGerirCliente.SelectedRows.Count > 0)
             {
-                // Obtém o código do cliente da linha selecionada
                 int codigo = Convert.ToInt32(dgvGerirCliente.CurrentRow.Cells[0].Value);
+
+                var frm_AlterarCliente = new frmAlterarCliente(codigo);
+                frm_AlterarCliente.ShowDialog();
+
+                //Listar Clientes apos fechar tela
+                ListarCliente();
             }
+
+            else
+            {
+                MessageBox.Show("Selecione um registro para alteração");
+            }
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
