@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -39,6 +40,30 @@ namespace ChamadosTecnicosTec55.Alterar
                 txbProfissao.Text = cliente.Profissao.ToString();
                 txbSetor.Text = cliente.Setor.ToString();
                 txbObs.Text = cliente.Obs.ToString();
+            }
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            Cliente cliente = new Cliente();
+            ClienteDao clientedao = new ClienteDao(_conexao);
+
+            try
+            {
+                cliente.Nome = txbNome.Text;
+                cliente.Profissao = txbProfissao.Text;
+                cliente.Setor = txbSetor.Text;
+                cliente.Obs = txbObs.Text;
+
+                int codigo = Convert.ToInt32(txbCodigo.Text);
+                cliente.CodigoCliente = codigo;
+                clientedao.AlterarCliente(cliente);
+
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
