@@ -61,14 +61,21 @@ namespace ChamadosTecnicosTec55
 
         private void gestorDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var formgerirtecnico = new frmGerirClientes();
-            formgerirtecnico.MdiParent = this;
-            formgerirtecnico.Show();
+            var formgerircliente = new frmGerirClientes();
+            formgerircliente.MdiParent = this;
+            formgerircliente.Show();
         }
 
         private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void gestorDeChamadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formgerirtecnico = new frmGerirTecnico();
+            formgerirtecnico.MdiParent = this;
+            formgerirtecnico.Show();
         }
     }
 }

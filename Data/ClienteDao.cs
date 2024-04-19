@@ -13,9 +13,7 @@ namespace Data
     {
         private string _conexao;
 
-
         // Metodo Construtor => Inicializa Objeto buscando Conexao
-
 
         public ClienteDao(string conexao)
         {
@@ -27,7 +25,7 @@ namespace Data
         // Inserir Clinte Vulgo XUXAR
         public void IncluiCliente(Cliente cliente)
         {
-            using (SqlConnection conexaoBd = new SqlConnection(_conexao))
+            using(SqlConnection conexaoBd = new SqlConnection(_conexao))
             {
                 string sql = "insert into Clientes (nome,profissao,setor,obs) values (@nome,@profissao,@setor,@obs)";
 
@@ -38,7 +36,6 @@ namespace Data
                     comando.Parameters.AddWithValue("@profissao", cliente.Profissao);
                     comando.Parameters.AddWithValue("@setor", cliente.Setor);
                     comando.Parameters.AddWithValue("@obs", cliente.Obs);
-
 
                     try
                     {
@@ -70,7 +67,6 @@ namespace Data
                     adaptador.Fill(dsClientes, "Clientes");
                     return dsClientes;
                 }
-
             }
             catch (Exception ex)
             {
@@ -120,13 +116,14 @@ namespace Data
         {
             const string query = @"update Clientes set nome=@Nome, 
                                     Setor = @Setor, Profissao = @Profissao, 
-                                    Observacao = @Observacao 
+                                    Obs = @Obs 
                                     where CodigoCliente = @CodCliente";
             try
             {
-                using(var conexaoBd =new SqlConnection(_conexao))
-                using(var comando = new SqlCommand(query, conexaoBd))
+                using (var conexaoBd = new SqlConnection(_conexao))
+                using (var comando = new SqlCommand(query, conexaoBd))
                 {
+                    comando.Parameters.AddWithValue("@CodCliente", cliente.CodigoCliente);
                     comando.Parameters.AddWithValue("@Nome", cliente.Nome);
                     comando.Parameters.AddWithValue("@Setor", cliente.Setor);
                     comando.Parameters.AddWithValue("@Profissao", cliente.Profissao);
@@ -135,9 +132,27 @@ namespace Data
                     comando.ExecuteNonQuery();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw new Exception($"Erro{ex}");
+            }
+        }
+        public void ExcluirCliente(int codigoCliente)
+        {
+            const string query = @"delete from clientes where codigocliente = @codigoCliente";
+            try
+            {
+                using(var conexaoBd = new SqlConnection(_conexao))
+                using(var comando = new SqlCommand (query, conexaoBd))
+                {
+                    comando.Parameters.AddWithValue("@codigoCliente", codigoCliente);
+                    conexaoBd.Open();
+                    comando.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Erro ao excluir{ex.Message}",ex);
             }
         }
     }
